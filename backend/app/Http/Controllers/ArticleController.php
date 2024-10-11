@@ -25,7 +25,19 @@ class ArticleController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        try {
+            $article = new Article([
+               "designation"=> $request->input('designation'),
+               "reference"=> $request->input('reference'),
+               "marque"=> $request->input('marque'),
+               "prix"=> $request->input('prix'),
+               "qtestock"=>$request->input('qtestock'),
+               "imageart"=>$request->input('imageart'),
+               "scategorieID"=>$request->input('scategorieID'),
+            ]);
+        } catch (\Exception $e) {
+
+        }
     }
 
     /**
