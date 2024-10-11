@@ -13,7 +13,7 @@ class ArticleController extends Controller
     public function index()
     {
         try {
-            $articles = Article::with('scategories')->get();
+            $articles = Article::with('scategorie')->get();
             return response()->json($articles, 200);
         } catch(\Exception $e) {
             return response()->json(['error' => $e->getMessage()], 500);
@@ -88,6 +88,19 @@ class ArticleController extends Controller
         try {
             $articles = Article::with('scategories')->where('scategorieID', $idscat)->get();
             return response()->json($articles, 200);
+        } catch(\Exception $e) {
+            return response()->json(['error' => $e->getMessage()], 500);
+        }
+    }
+
+    public function articlesPaginate() {
+        try {
+            $perPage = request()->input('pageSize', 10);
+            $articles = Article::with('scategorie')->paginate($perPage);
+            return response()->json([
+                'articles' => $articles->items(),
+                'totalPages' => $articles->lastPage()
+            ], 200);
         } catch(\Exception $e) {
             return response()->json(['error' => $e->getMessage()], 500);
         }
