@@ -20,6 +20,7 @@
         "APP_PACKAGES_CACHE": "/tmp/packages.php",
         "APP_ROUTES_CACHE": "/tmp/routes.php",
         "APP_SERVICES_CACHE": "/tmp/services.php",
+        "MYSQL_ATTR_SSL_CA":"C:\/Users\/yssfm\/dev\/ecommerce\backend\/certs\/isrgrootx1.pem",
         "VIEW_COMPILED_PATH": "/tmp",
         "CACHE_DRIVER": "array",
         "LOG_CHANNEL": "stderr",
