@@ -35,8 +35,10 @@ class ArticleController extends Controller
                "imageart"=>$request->input('imageart'),
                "scategorieID"=>$request->input('scategorieID'),
             ]);
+            $article->save();
+            return response()->json($article, 200);
         } catch (\Exception $e) {
-
+            return response()->json(['error' => $e->getMessage()], 500);
         }
     }
 
