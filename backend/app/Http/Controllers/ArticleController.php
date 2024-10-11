@@ -43,9 +43,15 @@ class ArticleController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Article $article)
+    public function show($id)
     {
-        //
+        try {
+            $article =Article::with("scategorie")->findOrFail($id);
+            return response()->json($article, 200);
+        }
+        catch(\Exception $e) {
+            return response()->json(['error' => $e->getMessage()], 500);
+        }
     }
 
     /**
