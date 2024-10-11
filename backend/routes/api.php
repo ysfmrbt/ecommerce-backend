@@ -30,4 +30,4 @@ Route::middleware('api')->group(function () {
     Route::resource("/articles", ArticleController::class);
 });
 
-Route::get('/listarticles/{idscat}', [ArticleController::class, 'show'])->name('articles.show');
+Route::get('/listarticles/{idscat}', [ArticleController::class, 'showArticlesBySCAT']);
