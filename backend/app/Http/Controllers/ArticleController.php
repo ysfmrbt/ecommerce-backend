@@ -71,8 +71,14 @@ class ArticleController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Article $article)
+    public function destroy($id)
     {
-        //
+        try {
+            $article=Article::findOrFail($id);
+            $article->delete();
+            return response()->json(null, 204);
+        } catch(\Exception $e) {
+            return response()->json(['error' => $e->getMessage()], 500);
+        }
     }
 }

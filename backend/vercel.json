@@ -13,7 +13,7 @@
     "env": {
         "APP_ENV": "production",
         "APP_DEBUG": "true",
-        "APP_URL": "ecommerce-backend-eosin-tau.vercel.app",
+        "APP_URL": "vercel.com/ysfmrbts-projects/ecommerce-backend",
         "APP_KEY": "base64:bHYQGkru0wcYED185j1HqxVFbE69qkkLRfU1tBMNKuc=",
         "APP_CONFIG_CACHE": "/tmp/config.php",
         "APP_EVENTS_CACHE": "/tmp/events.php",
