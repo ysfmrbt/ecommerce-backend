@@ -7,13 +7,13 @@
     <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-
 requests">
 
-    <link href="{{ secure_asset('frontend/assets/index-DOEHBIKa.css') }}"
+    <link href="{{ secure_asset('frontend/dist/assets/index-DOEHBIKa.css') }}"
         rel="stylesheet">
 </head>
 
 <body>
     <div id="root"></div>
-    <script src="{{ secure_asset('frontend/assets/index-B_wJ74D5.js')
+    <script src="{{ secure_asset('frontend/dist/assets/index-B_wJ74D5.js')
 }}"></script>
 </body>
 
