@@ -95,7 +95,7 @@ class ArticleController extends Controller
 
     public function articlesPaginate() {
         try {
-            $perPage = request()->input('pageSize', 10);
+            $perPage = request()->input('pageSize', 2);
             $articles = Article::with('scategorie')->paginate($perPage);
             return response()->json([
                 'articles' => $articles->items(),
